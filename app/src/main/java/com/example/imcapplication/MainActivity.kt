@@ -2,8 +2,11 @@ package com.example.imcapplication
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.TextView
 import androidx.cardview.widget.CardView
 import androidx.core.content.ContextCompat
+import com.google.android.material.slider.RangeSlider
+import java.text.DecimalFormat
 
 class MainActivity : AppCompatActivity() {
 
@@ -12,6 +15,8 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var viewMale:CardView
     private lateinit var viewFemale:CardView
+    private lateinit var txvheight:TextView
+    private lateinit var rsheight:RangeSlider
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -24,6 +29,8 @@ class MainActivity : AppCompatActivity() {
     private fun initComponents(){
         viewFemale = findViewById(R.id.viewfemale)
         viewMale = findViewById(R.id.viewmale)
+        txvheight = findViewById(R.id.txvheight)
+        rsheight = findViewById(R.id.rsheight)
     }
 
     private fun initListeners(){
@@ -34,6 +41,11 @@ class MainActivity : AppCompatActivity() {
         viewFemale.setOnClickListener {
             changeGender()
             setGenderColor()
+        }
+        rsheight.addOnChangeListener{_, value, _ ->
+            val df = DecimalFormat("#.##")
+            val result =df.format(value)
+            txvheight.text = "$result cm"
         }
     }
 
