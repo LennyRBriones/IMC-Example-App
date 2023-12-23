@@ -5,6 +5,26 @@
     <string name="height"> Altura </string>
     <string name="weight"> Peso </string>
     <string name="age"> Edad </string>
+    <string name="calculate"> Calcular </string>
+    <string name="result"> Tu Resultado </string>
+    <string name="recalculate"> Recalcular </string>
+
+    <string name="error"> Error </string>
+
+    <string name="titleunderwight"> Bajo Paso </string>
+    <string name="descriptionunderwight"> Estás por debajo del peso optimo para tu edad y altura </string>
+
+    <string name="titlnormal"> Peso Regular </string>
+    <string name="descriptionnormal"> Estás en el peso optimo para tu edad y altura </string>
+
+
+    <string name="titleoverwight"> Sobre peso </string>
+    <string name="descriptionoverwight"> Estás por encima del peso optimo para tu edad y altura </string>
+
+
+    <string name="titleobesity"> Obesidad </string>
+    <string name="descriptionobesity"> Estás por encima del peso optimo para tu edad y altura  </string>
+
 
 
 
